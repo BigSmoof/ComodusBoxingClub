@@ -537,7 +537,7 @@ body {
         flex: 1 0 100%; /* 100% for single card per row on small devices */
         width: 100%;
         height: 500px;
-        transform: translateX(-5%);
+        transform: translateX(0%);
     }
 
     /* Adjust card image and body text */
@@ -555,4 +555,137 @@ body {
     }
 }
 
+/*================================= END OF CLASSES =============================*/
+
+/*================================ MEMBERSHIPS ================================*/
+
+.section-title-membership {
+    background: url('/static/images/title-bg.png') no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 38px;
+}
+
+.membership-text-wrapper {
+    background: rgba(167, 0, 0, 0.5); /* Dark red background */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    height: 600px;
+}
+
+.membership-text-wrapper > h2 {
+    color: rgb(255, 199, 79);
+    text-align: center;
+}
+
+.membership-text-wrapper > p {
+    font-size: 24px;
+}
+
+.membership-text-wrapper > .btn-custom {
+    margin-top: 20px;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+.membership-card {
+    background: rgba(0, 0, 0);
+    margin-top: 0px; /* Space between text wrapper and cards */
+    height: 600px; /* Adjust based on content */
+}
+
+.membership-card .card-img-top {
+    width: 70px; /* Adjust size of your icon */
+    margin: 20px auto; /* Center icon */
+    margin-bottom: 0px;
+}
+
+.membership-card-text-list {
+    text-align: left;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.card-body > .card-text {
+    font-size: 20px;
+}
+
+.membership-text-list {
+    font-size: 22px;
+    color: rgb(255, 199, 79);
+    margin: 5px;
+}
+
+.membership-text-list:last-child {
+    margin-bottom: 20px; /* Adds space below the last list item */
+}
+
+.membership-card .card-title, .membership-card .price {
+    margin-bottom: 15px;
+}
+
+.member-divider {
+    margin-top: 15px; /* Adjust top margin */
+    margin-bottom: 20px; /* Adjust bottom margin */
+    border: 0; /* Remove default border */
+    border-top: 1px solid #ccc; /* Small, light line */
+    width: 50%; /* Adjust width as needed */
+}
+
+
+.membership-card .price {
+    font-size: 20px; /* Make the price bigger */
+    color: #919191; /* Price color */
+}
+
+.price-number-red {
+    font-size: 34px;
+    color: rgb(230, 18, 18);
+}
+
+.price-number-blue {
+    font-size: 34px;
+    color: rgb(21, 18, 230);
+}
+
+/* Adjustments for responsive behavior */
+@media (max-width: 992px) {
+    .membership-card {
+        margin-top: 20px;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .membership-text-wrapper > .btn-custom {
+        width: 75%;
+        margin-top: 50px;
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .membership-text-wrapper {
+        margin-top: 20px;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .membership-card {
+        margin-bottom: 20px;
+    }
+
+    .membership-text-wrapper > .btn-custom {
+        width: 75%;
+        margin-top: 12px;
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
