@@ -206,7 +206,7 @@ body {
 /* ========================== ABOUT US ============================== */
 
 .title-wrapper .section-title {
-    background: url('/static/images/title-bg.png') no-repeat center;
+    background: url('./static/images/title-bg.png') no-repeat center;
     background-size: contain; /* Adjusts the background size to match the title */
     display: inline-block;
     object-position: center;
@@ -468,7 +468,7 @@ body {
 /*================================= CLASSES ======================================*/
 
 .section-title {
-    background: url('/static/images/title-bg.png') no-repeat center center;
+    background: url('./static/images/title-bg.png') no-repeat center center;
     background-size: contain;
     display: inline-block;
     padding: 10px 30px;
@@ -560,7 +560,7 @@ body {
 /*================================ MEMBERSHIPS ================================*/
 
 .section-title-membership {
-    background: url('/static/images/title-bg.png') no-repeat center center;
+    background: url('./static/images/title-bg.png') no-repeat center center;
     background-size: contain;
     display: inline-block;
     padding: 10px 30px;
