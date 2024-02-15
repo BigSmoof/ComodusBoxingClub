@@ -1,0 +1,233 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+/* ======================= MAIN TITLE ======================= */
+
+/* Navbar adjustments */
+.navbar {
+    justify-content: center; /* Center the navbar content */
+}
+
+.navbar-brand img {
+    max-height: 75px;
+}
+
+/* Centering navbar elements */
+.navbar-nav {
+    justify-content: center; /* Center navbar items */
+    flex-direction: row; /* Ensure items are in a row */
+}
+
+/* Adjusting navbar toggler for better alignment */
+.navbar-toggler {
+    margin-left: 1rem;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    margin: 0 10px; /* Adjust spacing between nav items */
+    font-size: 1.3rem; /* Adjust font size of nav elements */
+}
+
+/* Apply hover colors to nav items */
+.navbar .nav-item:nth-child(odd) .nav-link:hover {
+    color: rgb(230, 18, 18) !important;
+}
+
+.navbar .nav-item:nth-child(even) .nav-link:hover {
+    color: blue !important;
+}
+
+/* Dropdown item hover colors */
+.dropdown-menu .dropdown-item:nth-child(odd):hover {
+    background-color: rgb(230, 18, 18);
+}
+
+.dropdown-menu .dropdown-item:nth-child(even):hover {
+    background-color: blue;
+}
+
+/* Container for text, facilitating overlap */
+.text-column {
+    position: relative; /* Establishes a positioning context for absolute positioning */
+    z-index: 2; /* Ensures text layer is above the image */
+}
+
+/* Wrapper for text to manage overlap and positioning */
+.text-wrapper {
+    position: absolute;
+    right: -70%; /* Negative margin to overlap the image */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure text is above the image */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 0 20px; /* Padding around text */
+    padding-left: 200px;
+}
+
+/* Adjustments for title and tagline for readability */
+.welcome-title, .tagline {
+    color: white; /* Ensures text is visible on dark background */
+    font-size: 1.5em; /* Starts resizing dynamically with the viewport width */
+}
+
+.welcome-title {
+    color: rgb(230, 18, 18);
+    font-size: 2vw; /* Responsive font size */
+    line-height: 1.1;
+}
+
+.tagline {
+    font-size: 3.5vw; /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.spartan { color: rgb(0, 0, 235); }
+.champ { color: rgb(230, 18, 18); }
+
+/* Boxer image adjustments to ensure it's on the right and properly sized */
+.boxer-image {
+    width: 100%; /* Full width of its column */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.6; /* Adjust for desired transparency */
+    margin-left: auto; /* Push image to the right */
+}
+
+
+/* Ensuring text overlaps the image entirely on smaller screens */
+@media (max-width: 992px) { /* Adjusting the breakpoint for medium-sized screens */
+    .navbar-brand img {
+        max-height: 45px; /* Slightly smaller logo for medium screens */
+    }
+
+    .navbar .nav-link {
+        color: white !important;
+        margin: 0 10px; /* Adjust spacing between nav items */
+        font-size: 1rem; /* Adjust font size of nav elements */
+    }
+
+    /* Wrapper for text to manage overlap and positioning */
+    .text-wrapper {
+        right: -20%; /* Negative margin to overlap the image */
+        top: 100%;
+        transform: translateY(-50%);
+        z-index: 10; /* Ensure text is above the image */
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        padding: 0 20px; /* Padding around text */
+    }
+    .welcome-title, .tagline {
+        font-size: calc(16px + 1vw); /* Responsive font size with a minimum */
+        line-height: normal; /* Default line height */
+    }
+
+    /* Boxer image adjustments to ensure it's on the right and properly sized */
+    .boxer-image {
+        width: 150%; /* Full width of its column */
+        transform: translateX(-35%);
+        height: auto; /* Maintain aspect ratio */
+        opacity: 0.6; /* Adjust for desired transparency */
+        object-position: right !important;
+    }
+}
+
+@media (max-width: 768px) { /* Adjustments specifically for small screens */
+    .navbar-brand img {
+        max-height: 40px; /* Smaller logo for small screens */
+    }
+
+    .text-column, .text-wrapper {
+        position: static; /* Default positioning for better flow */
+    }
+
+    .text-wrapper {
+        text-align: center; /* Centers text for small screens */
+        transform: translateY(350%);
+        background-color: rgba(0,0,0,0.5); /* Adds background for readability */
+        top: 50%;
+    }
+
+    .navbar .nav-link {
+        font-size: 3vw; /* Larger font size for better readability on small screens */
+        padding: 10px 0; /* Adjusts padding for vertical spacing */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stacks navbar items vertically on small screens */
+    }
+
+    /* Boxer image adjustments to ensure it's on the right and properly sized */
+    .boxer-image {
+        width: 100%; /* Full width of its column */
+        transform: translateX(0%);
+        height: auto; /* Maintain aspect ratio */
+        opacity: 0.6; /* Adjust for desired transparency */
+        margin-left: auto; /* Push image to the right */
+    }
+}
+
+/* ======================= END OF MAIN TITLE ======================= */
+
+
+
+/* ========================== ABOUT US ============================== */
+
+.about-us-section {
+    position: relative;
+    color: white;
+}
+
+.title-wrapper .section-title {
+    background: url('/static/images/title-bg.png') no-repeat center;
+    background-size: contain; /* Adjusts the background size to match the title */
+    display: inline-block;
+    object-position: center;
+    padding: 30px 40px; /* Adjust based on your background image */
+    font-size: 45px;
+}
+
+.background-image-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.background-image-wrapper .background-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.7; /* Adjust based on your preference */
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Very transparent black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    background: rgba(0, 0, 0, 0.5); /* Slightly more visible for readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.star-icon {
+    color: gold; /* Adjust based on your preference */
+    margin-right: 5px;
+}
