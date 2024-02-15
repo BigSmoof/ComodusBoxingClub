@@ -9,7 +9,7 @@ body {
 /* Navbar adjustments */
 .navbar {
     justify-content: center; /* Center the navbar content */
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(17, 13, 228, 0.5) !important;
 }
 
 .navbar-brand img {
@@ -688,4 +688,104 @@ body {
         margin-right: auto;
     }
 }
+
+/*==================================== END OF MEMBERSHIPS ==============================*/
+.clients-main-text {
+    margin-top: 5px;
+}
+
+.testimonial-card {
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid; /* Default border color, will be overridden by specific classes */
+    border-radius: 5px;
+    height: 250px;
+}
+
+.carousel-item > .row > div:nth-child(2) {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.border-primary {
+    border-color: #007bff; /* Bootstrap primary blue */
+}
+
+.border-danger {
+    border-color: #dc3545; /* Bootstrap danger red */
+}
+
+.testimonial-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.testimonial-text-long {
+    font-size: 18px;
+}
+
+.client-name {
+    font-size: 20px;
+    color: rgb(255, 199, 79);
+}
+
+.rating {
+    color: gold;
+    font-size: 20px;
+}
+
+.carousel-item {
+    transition: transform 2s ease; /* changing transition speed to 2 seconds */
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+/*=================================== END OF OUR CLIENTS ===============================*/
+
+/*=================================== FOOTER ==================================*/
+.footer {
+    background-color: rgba(117, 0, 0, 0.5); /* Dark red background */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .footer-logo {
+    max-width: 100px; /* Adjust based on your logo size */
+    margin-bottom: 20px;
+  }
+
+  .list-unstyled > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .google-maps-image {
+    max-width: 75%; /* Ensure the image is responsive */
+    height: auto;
+  }
+  
+  /* Ensure the footer links are styled correctly */
+  .footer a.text-white:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .google-maps-image {
+        max-width: 45%; /* Ensure the image is responsive */
+        height: auto;
+      }
+
+    .footer > div > .row > div {
+        align-items: center !important;
+    }
+
+}
+
 
