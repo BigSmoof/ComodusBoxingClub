@@ -303,6 +303,10 @@ body {
         opacity: 0.6; /* Adjust for desired transparency */
         transform: translateY(65%)
     }
+
+    .feature-item {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -311,3 +315,213 @@ body {
     }
 }
 
+
+/*====================================== OUR VISION, GOAL, COMMUNITY SECTION ================================*/
+.goal-card {
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid; /* Default border color, will be overridden by specific classes */
+    border-radius: 5px;
+    height: auto;
+}
+
+.goal-text {
+    font-size: 20px;
+}
+
+.goal-title-blue {
+    color: #007bff;
+}
+
+.goal-title-red {
+    color: #dc3545;
+}
+
+/* Adjustments for medium devices (tablets) */
+@media (max-width: 992px) {
+
+    .goal-card {
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 2px solid; /* Default border color, will be overridden by specific classes */
+        border-radius: 5px;
+        height: auto;
+    }
+
+    .goal-row {
+        transform: translateY(20%)
+    }
+
+    .goal-text {
+        font-size: 16px;
+    }
+    
+    .goal-title-blue {
+        font-size: 20px;
+    }
+    
+    .goal-title-red {
+        color: #dc3545;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .goal-card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Adjustments for small devices (phones) */
+@media (max-width: 412px) {
+
+    .goal-row {
+        transform: translateY(25%)
+    }
+}
+
+
+/*====================================== OUR TRAINERS SECTION ================================*/
+
+.big-title {
+    font-size: 36px !important;
+}
+
+/* Trainer Card Image */
+.trainer-card {
+    width: 90%; /* Set width to 100% of the card width */
+    height: 650px; /* Fixed height */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+    background-color: rgba(255, 237, 237, 0.7);
+}
+
+.trainer-image-one {
+    width: 100%; /* Set width to 100% of the card width */
+    height: 500px; /* Fixed height */
+    background-image: url('./static/images/trainer1-nohover.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transition: background-image 0.3s ease-in-out;
+    margin: 0 auto; /* Center the image */
+    margin-top: 0px;
+}
+
+.trainer-image-two {
+    width: 100%; /* Set width to 100% of the card width */
+    height: 500px; /* Fixed height */
+    background-image: url('./static/images/trainer2-nohover.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transition: background-image 0.3s ease-in-out;
+    margin: 0 auto; /* Center the image */
+    margin-top: 0px;
+}
+
+.trainer-image-three {
+    width: 100%; /* Set width to 100% of the card width */
+    height: 500px; /* Fixed height */
+    background-image: url('./static/images/trainer3-nohover.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transition: background-image 0.3s ease-in-out;
+    margin: 0 auto; /* Center the image */
+    margin-top: 0px;
+}
+
+.trainer-card:hover .trainer-image-one {
+    background-image: url('./static/images/trainer1-hover.png');
+}
+
+.trainer-card:hover .trainer-image-two {
+    background-image: url('./static/images/trainer2-hover.png');
+}
+
+.trainer-card:hover .trainer-image-three {
+    background-image: url('./static/images/trainer3-hover.png');
+}
+
+.card.border-danger {
+    border-color: #dc3545; /* Bootstrap danger red */
+}
+.card.border-primary {
+    border-color: #007bff; /* Bootstrap primary blue */
+}
+
+.card-body-primary {
+    background-color: rgba(3, 0, 167, 0.5);
+}
+
+.card-body-danger {
+    background-color: rgba(167, 0, 0, 0.5);
+}
+
+.card-body h4 {
+    color: rgb(255, 217, 135)
+}
+
+.card-body p {
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+@media (max-width: 992px) {
+    .trainer-card {
+        height: auto; /* Allow card height to adjust based on content */
+    }
+
+    .trainer-image-one,
+    .trainer-image-two,
+    .trainer-image-three {
+        height: 300px; /* Adjusted height for tablet screens */
+        background-position: center bottom;
+    }
+
+    .card-body {
+        padding: 1rem; /* Adjust padding for better layout */
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .trainer-image-one,
+    .trainer-image-two,
+    .trainer-image-three {
+        height: 600px; /* Adjusted height for tablet screens */
+        width: 90%;
+    }
+
+    .trainer-card {
+        height: 650px; /* Allow card height to adjust based on content */
+    }
+}
+
+@media (max-width: 412px) {
+
+    .trainer-image-one,
+    .trainer-image-two,
+    .trainer-image-three {
+        height: 400px; /* Adjusted height for tablet screens */
+        width: 90%;
+    }
+
+    .trainer-card {
+        height: 650px; /* Allow card height to adjust based on content */
+    }
+
+    .card-deck {
+        transform: translateY(5%);
+    }
+
+    .trainers-title .section-title{
+        transform: translateY(100px) !important;
+        font-size: 25px !important;
+    }
+}
