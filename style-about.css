@@ -496,6 +496,7 @@ body {
     .trainer-image-three {
         height: 600px; /* Adjusted height for tablet screens */
         width: 90%;
+        background-position: center top;
     }
 
     .trainer-card {
@@ -503,25 +504,82 @@ body {
     }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 414px) {
 
     .trainer-image-one,
     .trainer-image-two,
     .trainer-image-three {
         height: 400px; /* Adjusted height for tablet screens */
-        width: 90%;
+        width: 100%;
     }
 
     .trainer-card {
-        height: 650px; /* Allow card height to adjust based on content */
+        height: 500px !important; /* Allow card height to adjust based on content */
     }
 
     .card-deck {
-        transform: translateY(5%);
+        transform: translateY(4%);
+        justify-content: center;
     }
 
     .trainers-title .section-title{
-        transform: translateY(100px) !important;
+        transform: translateY(75px) !important;
         font-size: 25px !important;
     }
+
+    .card-body {
+        height: auto;
+    }
 }
+
+/*=================================== FOOTER ==================================*/
+.footer {
+    background-color: rgba(117, 0, 0, 0.5); /* Dark red background */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .footer-logo {
+    max-width: 100px; /* Adjust based on your logo size */
+    margin-bottom: 20px;
+  }
+
+  .list-unstyled > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .footer-links-title {
+    background: url('./static/images/title-bg.png') no-repeat center;
+    background-size: contain; /* Adjusts the background size to match the title */
+    display: inline-block;
+    object-position: center;
+    padding: 15px 20px; /* Adjust based on your background image */
+    font-size: 25px;
+    position: relative;
+    z-index: 2;
+}
+  
+  .google-maps-image {
+    max-width: 75%; /* Ensure the image is responsive */
+    height: auto;
+  }
+  
+  /* Ensure the footer links are styled correctly */
+  .footer a.text-white:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .google-maps-image {
+        max-width: 45%; /* Ensure the image is responsive */
+        height: auto;
+      }
+
+    .footer > div > .row > div {
+        align-items: center !important;
+    }
+
+}
+

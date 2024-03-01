@@ -462,6 +462,15 @@ body {
 
 }
 
+@media (max-width: 412px) {
+
+    .about-text-wrapper > div {
+        height: 400px;
+        transform: translateY(-80%);
+    }
+}
+
+
 
 /*================================ END OF ABOUT US ==========================*/
 
@@ -688,6 +697,18 @@ body {
         margin-right: auto;
     }
 }
+
+@media (max-width: 412px) {
+    .membership-card {
+        height: auto;
+    }
+
+    .membership-text-wrapper {
+        height: auto;
+    }
+    
+}
+
 
 /*==================================== END OF MEMBERSHIPS ==============================*/
 .clients-main-text {
