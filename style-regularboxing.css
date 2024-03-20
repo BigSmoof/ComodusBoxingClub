@@ -139,7 +139,7 @@ body {
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 65%;
+    height: auto !important;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
     padding: 20px;
@@ -158,23 +158,6 @@ body {
 .about-paragraph-main {
     font-size: 56px !important;
     color:rgb(230, 18, 18) !important;
-}
-
-.feature-item {
-    background: rgba(66, 66, 66, 0.0); /* Light background for readability */
-    padding: 10px; /* Adjust padding inside feature items */
-    margin-bottom: 10px; /* Space between feature items */
-    border-radius: 5px; /* Rounded corners */
-    color: black; /* Text color */
-    font-size: 40px; /* Larger font size for better visibility */
-    max-width: 20%; /* Control the maximum width of the boxes */
-    margin-left: auto; /* Center align the boxes by automatically adjusting the left margin */
-    margin-right: auto; /* Center align the boxes by automatically adjusting the right margin */
-}
-
-.star-icon {
-    color: gold; /* Star icon color */
-    margin-right: 5px; /* Space between the star icon and the text */
 }
 
 
@@ -229,6 +212,18 @@ body {
 
 /* Adjustments for small devices (phones) */
 @media (max-width: 768px) {
+    .title-wrapper .section-title {
+        background: url('./static/images/title-bg.png') no-repeat center;
+        background-size: contain; /* Adjusts the background size to match the title */
+        display: inline-block;
+        object-position: center;
+        padding: 10px 15px; /* Adjust based on your background image */
+        font-size: 25px;
+        position: relative;
+        z-index: 2;
+        transform: translateY(70%) !important;
+    }
+
     .centered-text-wrapper {
         width: 90%; /* Slightly narrower to fit smaller screens */
         height: auto;
@@ -306,10 +301,6 @@ body {
         opacity: 0.6; /* Adjust for desired transparency */
         transform: translateY(65%)
     }
-
-    .feature-item {
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 360px) {
@@ -319,245 +310,44 @@ body {
 }
 
 
-/*====================================== OUR VISION, GOAL, COMMUNITY SECTION ================================*/
-.goal-card {
-    padding: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 2px solid; /* Default border color, will be overridden by specific classes */
-    border-radius: 5px;
-    height: auto;
+/*============================== RECREATIONAL & COMPETITIVE BOXING =========================*/
+
+/* Custom Styles */
+.card.text-bg-dark {
+    background-color: black; /* Sets the background color of the text card to black */
 }
 
-.goal-text {
-    font-size: 20px;
+.card.text-bg-dark .card-title {
+    color: rgb(255, 199, 79); /* Sets the color of the icon in the card title to red */
+    text-align: center;
 }
 
-.goal-title-blue {
-    color: #007bff;
+/* Ensures cards are centered with a gap */
+.row > .col-md-5:not(:last-child) {
+    margin-right: 15px; /* Adds margin to the right of each card except the last one in a row */
 }
 
-.goal-title-red {
-    color: #dc3545;
+.row > .col-md-5 {
+    display: flex; /* Flex display to align items */
+    justify-content: center; /* Center the cards horizontally */
 }
 
-/* Adjustments for medium devices (tablets) */
-@media (max-width: 1024px) {
-
-    .goal-card {
-        padding: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        border: 2px solid; /* Default border color, will be overridden by specific classes */
-        border-radius: 5px;
-        height: auto;
-    }
-
-    .goal-row {
-        transform: translateY(20%)
-    }
-
-    .goal-text {
-        font-size: 16px;
-    }
-    
-    .goal-title-blue {
-        font-size: 20px;
-    }
-    
-    .goal-title-red {
-        color: #dc3545;
-        font-size: 20px;
-    }
+.card-img-top {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
 }
 
-
-@media (max-width: 768px) {
-    .goal-card {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-/* Adjustments for small devices (phones) */
-@media (max-width: 412px) {
-
-    .goal-row {
-        transform: translateY(25%)
-    }
-
-    .goal-card {
-        height: auto;
-    }
-}
-
-
-/*====================================== OUR TRAINERS SECTION ================================*/
-
-.big-title {
-    font-size: 36px !important;
-}
-
-/* Trainer Card Image */
-.trainer-card {
-    width: 90%; /* Set width to 100% of the card width */
-    height: auto !important; /* Fixed height */
-    background-size: cover;
-    background-position: center;
-    transition: background-image 0.3s ease-in-out;
-    background-color: rgba(255, 237, 237, 0.7);
-}
-
-.trainer-image {
-    width: 100%; /* Ensures the image covers the card width */
-    height: 75%;
-    transition: filter 0.3s ease-in-out; /* Smooth transition for the filter effect */
-    filter: grayscale(100%); /* Makes the image black and white */
-}
-
-.trainer-card:hover .trainer-image {
-    filter: grayscale(0); /* Removes the filter, making the image colored */
-}
-
-.card.border-danger {
-    border-color: #dc3545; /* Bootstrap danger red */
-}
-.card.border-primary {
-    border-color: #007bff; /* Bootstrap primary blue */
-}
-
-.card-body-primary {
-    background-color: rgba(3, 0, 167, 0.5);
-}
-
-.card-body-danger {
-    background-color: rgba(167, 0, 0, 0.5);
-}
-
-.card-body h4 {
-    color: rgb(255, 217, 135)
-}
-
-.card-body p {
-    font-size: 18px; /* Adjust the font size as needed */
-}
-
-.card-deck {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the cards on the line */
-    align-items: stretch; /* Ensures cards have the same height */
-}
-
-.card-deck .col-md-4 {
-    display: flex;
-    justify-content: center; /* Centers the card within the column */
-    margin-bottom: 1rem; /* Adds some space below each card */
-}
-
-/* Ensure cards have equal width and margin */
-.card-deck .card {
-    flex: 0 0 100%; /* Adjust this value based on desired card width */
-    height: auto;
-}
-
-@media (max-width: 1024px) {
-
-    .trainer-card {
-        height: auto; /* Allows the card height to adjust based on content */
-        margin: auto;
-    }
-
-    .card-body {
-        padding: 1rem; /* Adjust padding for better layout */
-        height: 200px !important;
-    }
+.card-icon {
+    width: 70px; /* Adjust size of your icon */
+    margin: auto; /* Center icon */
+    margin-bottom: 5px;
+    display: block;
 }
 
 @media (max-width: 768px) {
-    .trainer-image {
-        height: auto; /* Adjusted height for mobile screens */
-    }
-
-    .trainer-card {
-        height: auto; /* Allow card height to adjust based on content */
+    /* Adjusts layout for smaller screens */
+    .row > .col-md-5:not(:last-child) {
+        margin-right: 0; /* Removes the right margin for small screens */
+        margin-bottom: 15px; /* Adds a bottom margin for stacking */
     }
 }
-
-@media (max-width: 414px) {
-
-    .trainer-image {
-        height: auto; /* Adjusted height for mobile screens */
-    }
-
-    .trainer-card {
-        height: auto !important; /* Allow card height to adjust based on content */
-        margin: auto;
-    }
-
-    .card-deck {
-        transform: translateY(4%);
-        justify-content: center;
-    }
-
-    .trainers-title .section-title{
-        transform: translateY(75px) !important;
-        font-size: 25px !important;
-    }
-
-    .card-body {
-        height: auto;
-    }
-}
-
-/*=================================== FOOTER ==================================*/
-.footer {
-    background-color: rgba(117, 0, 0, 0.5); /* Dark red background */
-    padding: 20px 0; /* Adjust padding as needed */
-  }
-  
-  .footer-logo {
-    max-width: 100px; /* Adjust based on your logo size */
-    margin-bottom: 20px;
-  }
-
-  .list-unstyled > li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-
-  .footer-links-title {
-    background: url('./static/images/title-bg.png') no-repeat center;
-    background-size: contain; /* Adjusts the background size to match the title */
-    display: inline-block;
-    object-position: center;
-    padding: 15px 20px; /* Adjust based on your background image */
-    font-size: 25px;
-    position: relative;
-    z-index: 2;
-}
-  
-  .google-maps-image {
-    max-width: 75%; /* Ensure the image is responsive */
-    height: auto;
-  }
-  
-  /* Ensure the footer links are styled correctly */
-  .footer a.text-white:hover {
-    text-decoration: underline;
-  }
-  
-
-  @media (max-width: 768px) {
-    .google-maps-image {
-        max-width: 45%; /* Ensure the image is responsive */
-        height: auto;
-      }
-
-    .footer > div > .row > div {
-        align-items: center !important;
-    }
-
-}
-
