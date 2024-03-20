@@ -187,7 +187,7 @@ body {
 }
 
 /* Adjustments for medium devices (tablets) */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 
     .title-wrapper .section-title {
         background-size: contain; /* Adjusts the background size to match the title */
@@ -206,7 +206,7 @@ body {
     }
 
     .about-paragraph-main {
-        font-size: 36px !important;
+        font-size: 30px !important;
         color:rgb(230, 18, 18) !important;
     }
 
@@ -215,11 +215,11 @@ body {
     }
 
     .about-text {
-        font-size: 20px !important;
+        font-size: 25px !important;
     }
 
     .feature-item {
-        font-size: 20px; /* Smaller features list */
+        font-size: 25px; /* Smaller features list */
         padding: 8px;
     }
 }
@@ -339,7 +339,7 @@ body {
 }
 
 /* Adjustments for medium devices (tablets) */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 
     .goal-card {
         padding: 20px;
@@ -382,6 +382,10 @@ body {
     .goal-row {
         transform: translateY(25%)
     }
+
+    .goal-card {
+        height: auto;
+    }
 }
 
 
@@ -394,59 +398,22 @@ body {
 /* Trainer Card Image */
 .trainer-card {
     width: 90%; /* Set width to 100% of the card width */
-    height: 650px; /* Fixed height */
+    height: auto !important; /* Fixed height */
     background-size: cover;
     background-position: center;
     transition: background-image 0.3s ease-in-out;
     background-color: rgba(255, 237, 237, 0.7);
 }
 
-.trainer-image-one {
-    width: 100%; /* Set width to 100% of the card width */
-    height: 500px; /* Fixed height */
-    background-image: url('./static/images/trainer1-nohover.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center top;
-    transition: background-image 0.3s ease-in-out;
-    margin: 0 auto; /* Center the image */
-    margin-top: 0px;
+.trainer-image {
+    width: 100%; /* Ensures the image covers the card width */
+    height: 75%;
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the filter effect */
+    filter: grayscale(100%); /* Makes the image black and white */
 }
 
-.trainer-image-two {
-    width: 100%; /* Set width to 100% of the card width */
-    height: 500px; /* Fixed height */
-    background-image: url('./static/images/trainer2-nohover.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center top;
-    transition: background-image 0.3s ease-in-out;
-    margin: 0 auto; /* Center the image */
-    margin-top: 0px;
-}
-
-.trainer-image-three {
-    width: 100%; /* Set width to 100% of the card width */
-    height: 500px; /* Fixed height */
-    background-image: url('./static/images/trainer3-nohover.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center top;
-    transition: background-image 0.3s ease-in-out;
-    margin: 0 auto; /* Center the image */
-    margin-top: 0px;
-}
-
-.trainer-card:hover .trainer-image-one {
-    background-image: url('./static/images/trainer1-hover.png');
-}
-
-.trainer-card:hover .trainer-image-two {
-    background-image: url('./static/images/trainer2-hover.png');
-}
-
-.trainer-card:hover .trainer-image-three {
-    background-image: url('./static/images/trainer3-hover.png');
+.trainer-card:hover .trainer-image {
+    filter: grayscale(0); /* Removes the filter, making the image colored */
 }
 
 .card.border-danger {
@@ -472,16 +439,30 @@ body {
     font-size: 18px; /* Adjust the font size as needed */
 }
 
-@media (max-width: 992px) {
-    .trainer-card {
-        height: auto; /* Allow card height to adjust based on content */
-    }
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards on the line */
+    align-items: stretch; /* Ensures cards have the same height */
+}
 
-    .trainer-image-one,
-    .trainer-image-two,
-    .trainer-image-three {
-        height: 300px; /* Adjusted height for tablet screens */
-        background-position: center bottom;
+.card-deck .col-md-4 {
+    display: flex;
+    justify-content: center; /* Centers the card within the column */
+    margin-bottom: 1rem; /* Adds some space below each card */
+}
+
+/* Ensure cards have equal width and margin */
+.card-deck .card {
+    flex: 0 0 100%; /* Adjust this value based on desired card width */
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+
+    .trainer-card {
+        height: auto; /* Allows the card height to adjust based on content */
+        margin: auto;
     }
 
     .card-body {
@@ -491,30 +472,24 @@ body {
 }
 
 @media (max-width: 768px) {
-    .trainer-image-one,
-    .trainer-image-two,
-    .trainer-image-three {
-        height: 600px; /* Adjusted height for tablet screens */
-        width: 90%;
-        background-position: center top;
+    .trainer-image {
+        height: auto; /* Adjusted height for mobile screens */
     }
 
     .trainer-card {
-        height: 650px; /* Allow card height to adjust based on content */
+        height: auto; /* Allow card height to adjust based on content */
     }
 }
 
 @media (max-width: 414px) {
 
-    .trainer-image-one,
-    .trainer-image-two,
-    .trainer-image-three {
-        height: 400px; /* Adjusted height for tablet screens */
-        width: 100%;
+    .trainer-image {
+        height: auto; /* Adjusted height for mobile screens */
     }
 
     .trainer-card {
-        height: 500px !important; /* Allow card height to adjust based on content */
+        height: auto !important; /* Allow card height to adjust based on content */
+        margin: auto;
     }
 
     .card-deck {
