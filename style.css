@@ -760,6 +760,23 @@ body {
     transition: transform 2s ease; /* changing transition speed to 2 seconds */
 }
 
+/* Ensures cards are centered with a gap */
+.image-row > .col-md-4 > .card{
+    background-color: black;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image-row > .col-md-5 {
+    justify-content: center; /* Center the cards horizontally */
+}
+
+.client-card-img-top {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
 @media (max-width: 768px) {
     .testimonial-card {
         margin-top: 5px;
