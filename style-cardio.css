@@ -1,0 +1,543 @@
+body {
+    background-color: rgb(7, 2, 2);
+    color: white;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+/* ======================= MAIN TITLE ======================= */
+
+/* Navbar adjustments */
+.navbar {
+    justify-content: center; /* Center the navbar content */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar-brand img {
+    max-height: 80px;
+}
+
+/* Centering navbar elements */
+.navbar-nav {
+    justify-content: center; /* Center navbar items */
+    flex-direction: row; /* Ensure items are in a row */
+}
+
+/* Adjusting navbar toggler for better alignment */
+.navbar-toggler {
+    margin-left: 1rem;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    margin: 0 10px; /* Adjust spacing between nav items */
+    font-size: 30px; /* Adjust font size of nav elements */
+}
+
+.dropdown-item {
+    font-size: 20px;
+}
+
+/* Apply hover colors to nav items */
+.navbar .nav-item:nth-child(odd) .nav-link:hover {
+    color: rgb(230, 18, 18) !important;
+}
+
+.navbar .nav-item:nth-child(even) .nav-link:hover {
+    color: blue !important;
+}
+
+/* Dropdown item hover colors */
+.dropdown-menu .dropdown-item:nth-child(odd):hover {
+    background-color: rgb(230, 18, 18);
+}
+
+.dropdown-menu .dropdown-item:nth-child(even):hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Ensuring text overlaps the image entirely on smaller screens */
+@media (max-width: 992px) { /* Adjusting the breakpoint for medium-sized screens */
+    .navbar-brand img {
+        max-height: 50px; /* Slightly smaller logo for medium screens */
+    }
+
+    .navbar-brand {
+        transform: translateX(-600%) !important;
+    }
+
+    .navbar-toggler {
+        transform: translateX(600%) !important;
+    }
+
+    .navbar .nav-link {
+        color: white !important;
+        margin: 0 10px; /* Adjust spacing between nav items */
+        font-size: 1rem; /* Adjust font size of nav elements */
+    }
+}
+
+@media (max-width: 768px) { /* Adjustments specifically for small screens */
+    .navbar-brand img {
+        max-height: 60px; /* Smaller logo for small screens */
+    }
+
+    .navbar-brand {
+        transform: translateX(-150%) !important;
+    }
+
+    .navbar-toggler {
+        transform: translateX(200%) !important;
+    }
+
+    .text-column, .text-wrapper {
+        position: static; /* Default positioning for better flow */
+        transform: translateY(100%); /* Ensures vertical centering is accurate */
+    }
+
+    .navbar .nav-link {
+        font-size: 3vw; /* Larger font size for better readability on small screens */
+        padding: 10px 0; /* Adjusts padding for vertical spacing */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stacks navbar items vertically on small screens */
+    }
+
+    .dropdown-item {
+        font-size: 15px;
+    }
+}
+
+/* ========================== ABOUT US ============================== */
+
+.title-wrapper .section-title {
+    background: url('./static/images/title-bg.png') no-repeat center;
+    background-size: contain; /* Adjusts the background size to match the title */
+    display: inline-block;
+    object-position: center;
+    padding: 15px 20px; /* Adjust based on your background image */
+    font-size: 45px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-us-full-width-image {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.about-us-full-width-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.6; /* Adjust for desired transparency */
+}
+
+.centered-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto !important;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.family-text {
+    color: gold;
+}
+
+.about-paragraph {
+    font-size: 56px;
+}
+
+.about-paragraph-main {
+    font-size: 56px !important;
+    color:rgb(230, 18, 18) !important;
+}
+
+
+.centered-text-wrapper h2 {
+    font-size: 2.5rem; /* Adjust based on design */
+}
+
+.centered-text-wrapper p {
+    font-size: 1.25rem; /* Adjust based on design */
+}
+
+.spartan { color: rgb(0, 0, 235); }
+.champ { color: rgb(230, 18, 18); }
+
+/* Adjustments for medium devices (tablets) */
+@media (max-width: 1024px) {
+
+    .title-wrapper .section-title {
+        background-size: contain; /* Adjusts the background size to match the title */
+        display: inline-block;
+        object-position: center;
+        padding: 15px 10px; /* Adjust based on your background image */
+        font-size: 30px;
+    }
+
+    .centered-text-wrapper {
+        width: 90%; /* Slightly narrower to fit smaller screens */
+        height: auto;
+        padding: 30px; /* More padding for better readability */
+        font-size: 90%; /* Slightly smaller text */
+        margin-top: 2%;
+    }
+
+    .about-paragraph-main {
+        font-size: 30px !important;
+        color:rgb(230, 18, 18) !important;
+    }
+
+    .family-text {
+        font-size: 26px !important;
+    }
+
+    .about-text {
+        font-size: 25px !important;
+    }
+
+    .feature-item {
+        font-size: 25px; /* Smaller features list */
+        padding: 8px;
+    }
+}
+
+/* Adjustments for small devices (phones) */
+@media (max-width: 768px) {
+    .title-wrapper .section-title {
+        background: url('./static/images/title-bg.png') no-repeat center;
+        background-size: contain; /* Adjusts the background size to match the title */
+        display: inline-block;
+        object-position: center;
+        padding: 10px 15px; /* Adjust based on your background image */
+        font-size: 25px;
+        position: relative;
+        z-index: 2;
+        transform: translateY(70%) !important;
+    }
+
+    .centered-text-wrapper {
+        width: 90%; /* Slightly narrower to fit smaller screens */
+        height: auto;
+        padding: 30px; /* More padding for better readability */
+        font-size: 90%; /* Slightly smaller text */
+        margin-top: 12%;
+    }
+
+    .about-paragraph-main {
+        font-size: 20px !important;
+        color:rgb(230, 18, 18) !important;
+    }
+
+    .family-text {
+        font-size: 18px !important;
+    }
+
+    .about-text {
+        font-size: 16px !important;
+    }
+
+    .feature-item {
+        font-size: 16px; /* Smaller features list */
+        padding: 8px;
+    }
+
+    .about-us-full-width-image img {
+        width: 100%;
+        height: auto;
+        opacity: 0.6; /* Adjust for desired transparency */
+        transform: translateY(40%)
+    }
+}
+
+/* Adjustments for small devices (phones) */
+@media (max-width: 412px) {
+
+    .title-wrapper .section-title {
+        background-size: contain; /* Adjusts the background size to match the title */
+        display: inline-block;
+        object-position: center;
+        padding: 15px 10px; /* Adjust based on your background image */
+        font-size: 22px;
+    }
+
+    .centered-text-wrapper {
+        width: 90%; /* Slightly narrower to fit smaller screens */
+        height: auto;
+        padding: 30px; /* More padding for better readability */
+        font-size: 90%; /* Slightly smaller text */
+        margin-top: 25%;
+    }
+
+    .about-paragraph-main {
+        font-size: 20px !important;
+        color:rgb(230, 18, 18) !important;
+    }
+
+    .family-text {
+        font-size: 18px !important;
+    }
+
+    .about-text {
+        font-size: 16px !important;
+    }
+
+    .feature-item {
+        font-size: 16px; /* Smaller features list */
+        padding: 8px;
+    }
+
+    .about-us-full-width-image img {
+        width: 100%;
+        height: auto;
+        opacity: 0.6; /* Adjust for desired transparency */
+        transform: translateY(65%)
+    }
+}
+
+@media (max-width: 360px) {
+    .about-us-full-width-image img {
+        transform: translateY(80%)
+    }
+}
+
+
+/*============================== RECREATIONAL & COMPETITIVE BOXING =========================*/
+
+/* Custom Styles */
+.card.text-bg-dark {
+    background-color: black; /* Sets the background color of the text card to black */
+}
+
+.card.text-bg-dark .card-title {
+    color: rgb(255, 199, 79); /* Sets the color of the icon in the card title to red */
+    text-align: center;
+}
+
+/* Ensures cards are centered with a gap */
+.row > .col-md-5:not(:last-child) {
+    margin-right: 15px; /* Adds margin to the right of each card except the last one in a row */
+}
+
+.row > .col-md-5 {
+    justify-content: center; /* Center the cards horizontally */
+}
+
+.card-title{
+    font-size: 28px;
+}
+
+.card-text {
+    font-size: 18px;
+}
+
+.card-img-top {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card-icon {
+    width: 70px; /* Adjust size of your icon */
+    margin: auto; /* Center icon */
+    margin-bottom: 5px;
+    display: block;
+}
+
+.card-body {
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    /* Adjusts layout for smaller screens */
+    .row > .col-md-5:not(:last-child) {
+        margin-right: 0; /* Removes the right margin for small screens */
+        margin-bottom: 15px; /* Adds a bottom margin for stacking */
+    }
+}
+
+
+/*========================= SCHEDULE SECTION ===============================*/
+
+.schedule-container {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0 15px;
+}
+
+.schedule-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for all screen sizes */
+    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center;
+}
+
+.schedule-col {
+    flex: 1; /* Grow to fill available space */
+    min-width: 120px; /* Minimum width for smaller screens */
+}
+
+.schedule-card {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: 2px solid transparent; /* Transparent border for inactive cards */
+    height: 150px; /* Fixed height for all cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.schedule-card.activeblue {
+    border-color: #007bff; /* Blue border for active cards */
+}
+
+.schedule-card.activered {
+    border-color: rgb(230, 18, 18); /* Blue border for active cards */
+}
+
+.schedule-card.inactive .card-body {
+    opacity: 0.5; /* Gray out the inactive cards */
+}
+
+.card-title {
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+.kids-title {
+    color: rgb(255, 199, 79);
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+.card-text {
+    font-size: 22px; /* Smaller font size for class times */
+}
+
+.beginner-kids .advanced-kids{
+    font-size: 22px;
+}
+
+.schedule-card-text {
+    color: rgb(255, 199, 79);
+    font-size: 22px;
+}
+
+
+/* Stacking cards for smaller screens */
+@media (max-width: 768px) {
+    .schedule-row {
+        gap: 20px; /* Adjust the gap between stacked cards */
+    }
+
+    .schedule-col {
+        flex: 0 0 100%; /* Make each card take full width on small screens */
+    }
+
+    .schedule-title {
+        transform: translateY(-90%);
+    }
+
+    .schedule-title .section-title{
+        font-size: 35px;
+    }
+
+    .kids-title {
+        font-size: 25px !important;
+    }
+
+    .beginner-kids, .advanced-kids{
+        font-size: 18px !important;
+    }
+
+    .beginner-advanced-section {
+        transform: translateY(15%)
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .schedule-col {
+        flex: 0 0 calc(50% - 20px); /* Adjust width for two cards per row on tablets, accounting for gap */
+    }
+    .schedule-row {
+        justify-content: center; /* Center-align the flex items */
+    }
+
+    .schedule-col &:nth-child(7):last-child{
+        flex: 0 0 100%; /* Make each card take full width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1025px) {
+    .schedule-col {
+        flex: 0 0 calc(33.333% - 20px); /* Adjust width for three cards per row on larger screens, accounting for gap */
+    }
+}
+
+
+/*=================================== FOOTER ==================================*/
+.footer {
+    background-color: rgba(117, 0, 0, 0.5); /* Dark red background */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .footer-logo {
+    max-width: 100px; /* Adjust based on your logo size */
+    margin-bottom: 20px;
+  }
+
+  .list-unstyled > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .footer-links-title {
+    background: url('./static/images/title-bg.png') no-repeat center;
+    background-size: contain; /* Adjusts the background size to match the title */
+    display: inline-block;
+    object-position: center;
+    padding: 15px 20px; /* Adjust based on your background image */
+    font-size: 25px;
+    position: relative;
+    z-index: 2;
+}
+  
+  .google-maps-image {
+    max-width: 75%; /* Ensure the image is responsive */
+    height: auto;
+  }
+  
+  /* Ensure the footer links are styled correctly */
+  .footer a.text-white:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .google-maps-image {
+        max-width: 45%; /* Ensure the image is responsive */
+        height: auto;
+      }
+
+    .footer > div > .row > div {
+        align-items: center !important;
+    }
+
+}
+
+
+
+
