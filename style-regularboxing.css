@@ -328,8 +328,15 @@ body {
 }
 
 .row > .col-md-5 {
-    display: flex; /* Flex display to align items */
     justify-content: center; /* Center the cards horizontally */
+}
+
+.card-title{
+    font-size: 28px;
+}
+
+.card-text {
+    font-size: 18px;
 }
 
 .card-img-top {
@@ -344,6 +351,10 @@ body {
     display: block;
 }
 
+.card-body {
+    height: auto;
+}
+
 @media (max-width: 768px) {
     /* Adjusts layout for smaller screens */
     .row > .col-md-5:not(:last-child) {
@@ -351,3 +362,160 @@ body {
         margin-bottom: 15px; /* Adds a bottom margin for stacking */
     }
 }
+
+
+/*========================= SCHEDULE SECTION ===============================*/
+
+.schedule-container {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0 15px;
+}
+
+.schedule-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for all screen sizes */
+    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center;
+}
+
+.schedule-col {
+    flex: 1; /* Grow to fill available space */
+    min-width: 120px; /* Minimum width for smaller screens */
+}
+
+.schedule-card {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: 2px solid transparent; /* Transparent border for inactive cards */
+    height: 150px; /* Fixed height for all cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.schedule-card.activeblue {
+    border-color: #007bff; /* Blue border for active cards */
+}
+
+.schedule-card.activered {
+    border-color: rgb(230, 18, 18); /* Blue border for active cards */
+}
+
+.schedule-card.inactive .card-body {
+    opacity: 0.5; /* Gray out the inactive cards */
+}
+
+.card-title {
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+.card-text {
+    font-size: 22px; /* Smaller font size for class times */
+}
+
+.schedule-card-text {
+    color: rgb(255, 199, 79);
+    font-size: 22px;
+}
+
+
+/* Stacking cards for smaller screens */
+@media (max-width: 768px) {
+    .schedule-row {
+        gap: 20px; /* Adjust the gap between stacked cards */
+    }
+
+    .schedule-col {
+        flex: 0 0 100%; /* Make each card take full width on small screens */
+    }
+
+    .schedule-title {
+        transform: translateY(-90%);
+    }
+
+    .schedule-title .section-title{
+        font-size: 35px;
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .schedule-col {
+        flex: 0 0 calc(50% - 20px); /* Adjust width for two cards per row on tablets, accounting for gap */
+    }
+    .schedule-row {
+        justify-content: center; /* Center-align the flex items */
+    }
+
+    .schedule-col &:nth-child(7):last-child{
+        flex: 0 0 100%; /* Make each card take full width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1025px) {
+    .schedule-col {
+        flex: 0 0 calc(33.333% - 20px); /* Adjust width for three cards per row on larger screens, accounting for gap */
+    }
+}
+
+
+/*=================================== FOOTER ==================================*/
+.footer {
+    background-color: rgba(117, 0, 0, 0.5); /* Dark red background */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .footer-logo {
+    max-width: 100px; /* Adjust based on your logo size */
+    margin-bottom: 20px;
+  }
+
+  .list-unstyled > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .footer-links-title {
+    background: url('./static/images/title-bg.png') no-repeat center;
+    background-size: contain; /* Adjusts the background size to match the title */
+    display: inline-block;
+    object-position: center;
+    padding: 15px 20px; /* Adjust based on your background image */
+    font-size: 25px;
+    position: relative;
+    z-index: 2;
+}
+  
+  .google-maps-image {
+    max-width: 75%; /* Ensure the image is responsive */
+    height: auto;
+  }
+  
+  /* Ensure the footer links are styled correctly */
+  .footer a.text-white:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .google-maps-image {
+        max-width: 45%; /* Ensure the image is responsive */
+        height: auto;
+      }
+
+    .footer > div > .row > div {
+        align-items: center !important;
+    }
+
+}
+
+
+
+
