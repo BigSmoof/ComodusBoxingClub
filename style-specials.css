@@ -403,10 +403,6 @@ body {
     border-color: rgb(230, 18, 18); /* Blue border for active cards */
 }
 
-.schedule-card.inactive {
-    border-color: white;
-}
-
 .schedule-card.inactive .card-body {
     opacity: 0.5; /* Gray out the inactive cards */
 }
@@ -416,8 +412,18 @@ body {
     font-size: 45px;
 }
 
+.kids-title {
+    color: rgb(255, 199, 79);
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
 .card-text {
     font-size: 22px; /* Smaller font size for class times */
+}
+
+.beginner-kids .advanced-kids{
+    font-size: 22px;
 }
 
 .schedule-card-text {
@@ -442,6 +448,18 @@ body {
 
     .schedule-title .section-title{
         font-size: 35px;
+    }
+
+    .kids-title {
+        font-size: 25px !important;
+    }
+
+    .beginner-kids, .advanced-kids{
+        font-size: 18px !important;
+    }
+
+    .beginner-advanced-section {
+        transform: translateY(15%)
     }
 }
 

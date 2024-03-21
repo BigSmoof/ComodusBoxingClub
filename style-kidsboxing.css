@@ -403,6 +403,10 @@ body {
     border-color: rgb(230, 18, 18); /* Blue border for active cards */
 }
 
+.schedule-card.inactive {
+    border-color: white;
+}
+
 .schedule-card.inactive .card-body {
     opacity: 0.5; /* Gray out the inactive cards */
 }

@@ -122,53 +122,6 @@ body {
     z-index: 2;
 }
 
-.about-us-full-width-image {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.about-us-full-width-image img {
-    width: 100%;
-    height: auto;
-    opacity: 0.6; /* Adjust for desired transparency */
-}
-
-.centered-text-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: auto !important;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 1;
-}
-
-.family-text {
-    color: gold;
-}
-
-.about-paragraph {
-    font-size: 56px;
-}
-
-.about-paragraph-main {
-    font-size: 56px !important;
-    color:rgb(230, 18, 18) !important;
-}
-
-
-.centered-text-wrapper h2 {
-    font-size: 2.5rem; /* Adjust based on design */
-}
-
-.centered-text-wrapper p {
-    font-size: 1.25rem; /* Adjust based on design */
-}
-
 .spartan { color: rgb(0, 0, 235); }
 .champ { color: rgb(230, 18, 18); }
 
@@ -181,32 +134,6 @@ body {
         object-position: center;
         padding: 15px 10px; /* Adjust based on your background image */
         font-size: 30px;
-    }
-
-    .centered-text-wrapper {
-        width: 90%; /* Slightly narrower to fit smaller screens */
-        height: auto;
-        padding: 30px; /* More padding for better readability */
-        font-size: 90%; /* Slightly smaller text */
-        margin-top: 2%;
-    }
-
-    .about-paragraph-main {
-        font-size: 30px !important;
-        color:rgb(230, 18, 18) !important;
-    }
-
-    .family-text {
-        font-size: 26px !important;
-    }
-
-    .about-text {
-        font-size: 25px !important;
-    }
-
-    .feature-item {
-        font-size: 25px; /* Smaller features list */
-        padding: 8px;
     }
 }
 
@@ -223,146 +150,7 @@ body {
         z-index: 2;
         transform: translateY(70%) !important;
     }
-
-    .centered-text-wrapper {
-        width: 90%; /* Slightly narrower to fit smaller screens */
-        height: auto;
-        padding: 30px; /* More padding for better readability */
-        font-size: 90%; /* Slightly smaller text */
-        margin-top: 12%;
-    }
-
-    .about-paragraph-main {
-        font-size: 20px !important;
-        color:rgb(230, 18, 18) !important;
-    }
-
-    .family-text {
-        font-size: 18px !important;
-    }
-
-    .about-text {
-        font-size: 16px !important;
-    }
-
-    .feature-item {
-        font-size: 16px; /* Smaller features list */
-        padding: 8px;
-    }
-
-    .about-us-full-width-image img {
-        width: 100%;
-        height: auto;
-        opacity: 0.6; /* Adjust for desired transparency */
-        transform: translateY(40%)
-    }
 }
-
-/* Adjustments for small devices (phones) */
-@media (max-width: 412px) {
-
-    .title-wrapper .section-title {
-        background-size: contain; /* Adjusts the background size to match the title */
-        display: inline-block;
-        object-position: center;
-        padding: 15px 10px; /* Adjust based on your background image */
-        font-size: 22px;
-    }
-
-    .centered-text-wrapper {
-        width: 90%; /* Slightly narrower to fit smaller screens */
-        height: auto;
-        padding: 30px; /* More padding for better readability */
-        font-size: 90%; /* Slightly smaller text */
-        margin-top: 25%;
-    }
-
-    .about-paragraph-main {
-        font-size: 20px !important;
-        color:rgb(230, 18, 18) !important;
-    }
-
-    .family-text {
-        font-size: 18px !important;
-    }
-
-    .about-text {
-        font-size: 16px !important;
-    }
-
-    .feature-item {
-        font-size: 16px; /* Smaller features list */
-        padding: 8px;
-    }
-
-    .about-us-full-width-image img {
-        width: 100%;
-        height: auto;
-        opacity: 0.6; /* Adjust for desired transparency */
-        transform: translateY(65%)
-    }
-}
-
-@media (max-width: 360px) {
-    .about-us-full-width-image img {
-        transform: translateY(80%)
-    }
-}
-
-
-/*============================== RECREATIONAL & COMPETITIVE BOXING =========================*/
-
-/* Custom Styles */
-.card.text-bg-dark {
-    background-color: black; /* Sets the background color of the text card to black */
-}
-
-.card.text-bg-dark .card-title {
-    color: rgb(255, 199, 79); /* Sets the color of the icon in the card title to red */
-    text-align: center;
-}
-
-/* Ensures cards are centered with a gap */
-.row > .col-md-5:not(:last-child) {
-    margin-right: 15px; /* Adds margin to the right of each card except the last one in a row */
-}
-
-.row > .col-md-5 {
-    justify-content: center; /* Center the cards horizontally */
-}
-
-.card-title{
-    font-size: 28px;
-}
-
-.card-text {
-    font-size: 18px;
-}
-
-.card-img-top {
-    width: 100%; /* Full width of the card */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.card-icon {
-    width: 70px; /* Adjust size of your icon */
-    margin: auto; /* Center icon */
-    margin-bottom: 5px;
-    display: block;
-}
-
-.card-body {
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    /* Adjusts layout for smaller screens */
-    .row > .col-md-5:not(:last-child) {
-        margin-right: 0; /* Removes the right margin for small screens */
-        margin-bottom: 15px; /* Adds a bottom margin for stacking */
-    }
-}
-
 
 /*========================= SCHEDULE SECTION ===============================*/
 
@@ -388,7 +176,7 @@ body {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
     border: 2px solid transparent; /* Transparent border for inactive cards */
-    height: 150px; /* Fixed height for all cards */
+    height: 250px; /* Fixed height for all cards */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -416,8 +204,18 @@ body {
     font-size: 45px;
 }
 
+.kids-title {
+    color: rgb(255, 199, 79);
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
 .card-text {
     font-size: 22px; /* Smaller font size for class times */
+}
+
+.beginner-kids .advanced-kids{
+    font-size: 22px;
 }
 
 .schedule-card-text {
@@ -442,6 +240,18 @@ body {
 
     .schedule-title .section-title{
         font-size: 35px;
+    }
+
+    .kids-title {
+        font-size: 25px !important;
+    }
+
+    .beginner-kids, .advanced-kids{
+        font-size: 18px !important;
+    }
+
+    .beginner-advanced-section {
+        transform: translateY(15%)
     }
 }
 
