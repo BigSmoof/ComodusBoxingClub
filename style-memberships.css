@@ -1,0 +1,547 @@
+body {
+    background-color: rgb(7, 2, 2);
+    color: white;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+/* ======================= MAIN TITLE ======================= */
+
+/* Navbar adjustments */
+.navbar {
+    justify-content: center; /* Center the navbar content */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar-brand img {
+    max-height: 80px;
+}
+
+/* Centering navbar elements */
+.navbar-nav {
+    justify-content: center; /* Center navbar items */
+    flex-direction: row; /* Ensure items are in a row */
+}
+
+/* Adjusting navbar toggler for better alignment */
+.navbar-toggler {
+    margin-left: 1rem;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    margin: 0 10px; /* Adjust spacing between nav items */
+    font-size: 30px; /* Adjust font size of nav elements */
+}
+
+.dropdown-item {
+    font-size: 20px;
+}
+
+/* Apply hover colors to nav items */
+.navbar .nav-item:nth-child(odd) .nav-link:hover {
+    color: rgb(230, 18, 18) !important;
+}
+
+.navbar .nav-item:nth-child(even) .nav-link:hover {
+    color: blue !important;
+}
+
+/* Dropdown item hover colors */
+.dropdown-menu .dropdown-item:nth-child(odd):hover {
+    background-color: rgb(230, 18, 18);
+}
+
+.dropdown-menu .dropdown-item:nth-child(even):hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Ensuring text overlaps the image entirely on smaller screens */
+@media (max-width: 992px) { /* Adjusting the breakpoint for medium-sized screens */
+    .navbar-brand img {
+        max-height: 50px; /* Slightly smaller logo for medium screens */
+    }
+
+    .navbar-brand {
+        transform: translateX(-600%) !important;
+    }
+
+    .navbar-toggler {
+        transform: translateX(600%) !important;
+    }
+
+    .navbar .nav-link {
+        color: white !important;
+        margin: 0 10px; /* Adjust spacing between nav items */
+        font-size: 1rem; /* Adjust font size of nav elements */
+    }
+}
+
+@media (max-width: 768px) { /* Adjustments specifically for small screens */
+    .navbar-brand img {
+        max-height: 60px; /* Smaller logo for small screens */
+    }
+
+    .navbar-brand {
+        transform: translateX(-150%) !important;
+    }
+
+    .navbar-toggler {
+        transform: translateX(200%) !important;
+    }
+
+    .text-column, .text-wrapper {
+        position: static; /* Default positioning for better flow */
+        transform: translateY(100%); /* Ensures vertical centering is accurate */
+    }
+
+    .navbar .nav-link {
+        font-size: 3vw; /* Larger font size for better readability on small screens */
+        padding: 10px 0; /* Adjusts padding for vertical spacing */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stacks navbar items vertically on small screens */
+    }
+
+    .dropdown-item {
+        font-size: 15px;
+    }
+}
+
+/* ========================== ABOUT US ============================== */
+
+.title-wrapper .section-title {
+    background: url('./static/images/title-bg.png') no-repeat center;
+    background-size: contain; /* Adjusts the background size to match the title */
+    display: inline-block;
+    object-position: center;
+    padding: 15px 20px; /* Adjust based on your background image */
+    font-size: 45px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-us-full-width-image {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.about-us-full-width-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.6; /* Adjust for desired transparency */
+}
+
+.centered-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto !important;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.family-text {
+    color: gold;
+}
+
+.about-paragraph {
+    font-size: 56px;
+}
+
+.about-paragraph-main {
+    font-size: 56px !important;
+    color:rgb(230, 18, 18) !important;
+}
+
+
+.centered-text-wrapper h2 {
+    font-size: 2.5rem; /* Adjust based on design */
+}
+
+.centered-text-wrapper p {
+    font-size: 1.25rem; /* Adjust based on design */
+}
+
+.spartan { color: rgb(0, 0, 235); }
+.champ { color: rgb(230, 18, 18); }
+
+/* Adjustments for medium devices (tablets) */
+@media (max-width: 1024px) {
+
+    .title-wrapper .section-title {
+        background-size: contain; /* Adjusts the background size to match the title */
+        display: inline-block;
+        object-position: center;
+        padding: 15px 10px; /* Adjust based on your background image */
+        font-size: 30px;
+    }
+
+    .centered-text-wrapper {
+        width: 90%; /* Slightly narrower to fit smaller screens */
+        height: auto;
+        padding: 30px; /* More padding for better readability */
+        font-size: 90%; /* Slightly smaller text */
+        margin-top: 2%;
+    }
+
+    .about-paragraph-main {
+        font-size: 30px !important;
+        color:rgb(230, 18, 18) !important;
+    }
+
+    .family-text {
+        font-size: 26px !important;
+    }
+
+    .about-text {
+        font-size: 25px !important;
+    }
+
+    .feature-item {
+        font-size: 25px; /* Smaller features list */
+        padding: 8px;
+    }
+}
+
+/* Adjustments for small devices (phones) */
+@media (max-width: 768px) {
+    .title-wrapper .section-title {
+        background: url('./static/images/title-bg.png') no-repeat center;
+        background-size: contain; /* Adjusts the background size to match the title */
+        display: inline-block;
+        object-position: center;
+        padding: 10px 15px; /* Adjust based on your background image */
+        font-size: 25px;
+        position: relative;
+        z-index: 2;
+        transform: translateY(70%) !important;
+    }
+
+    .centered-text-wrapper {
+        width: 90%; /* Slightly narrower to fit smaller screens */
+        height: auto;
+        padding: 30px; /* More padding for better readability */
+        font-size: 90%; /* Slightly smaller text */
+        margin-top: 12%;
+    }
+
+    .about-paragraph-main {
+        font-size: 20px !important;
+        color:rgb(230, 18, 18) !important;
+    }
+
+    .family-text {
+        font-size: 18px !important;
+    }
+
+    .about-text {
+        font-size: 16px !important;
+    }
+
+    .feature-item {
+        font-size: 16px; /* Smaller features list */
+        padding: 8px;
+    }
+
+    .about-us-full-width-image img {
+        width: 100%;
+        height: auto;
+        opacity: 0.6; /* Adjust for desired transparency */
+        transform: translateY(40%)
+    }
+}
+
+/* Adjustments for small devices (phones) */
+@media (max-width: 412px) {
+
+    .title-wrapper .section-title {
+        background-size: contain; /* Adjusts the background size to match the title */
+        display: inline-block;
+        object-position: center;
+        padding: 15px 10px; /* Adjust based on your background image */
+        font-size: 22px;
+    }
+
+    .centered-text-wrapper {
+        width: 90%; /* Slightly narrower to fit smaller screens */
+        height: auto;
+        padding: 30px; /* More padding for better readability */
+        font-size: 90%; /* Slightly smaller text */
+        margin-top: 25%;
+    }
+
+    .about-paragraph-main {
+        font-size: 20px !important;
+        color:rgb(230, 18, 18) !important;
+    }
+
+    .family-text {
+        font-size: 18px !important;
+    }
+
+    .about-text {
+        font-size: 16px !important;
+    }
+
+    .feature-item {
+        font-size: 16px; /* Smaller features list */
+        padding: 8px;
+    }
+
+    .about-us-full-width-image img {
+        width: 100%;
+        height: auto;
+        opacity: 0.6; /* Adjust for desired transparency */
+        transform: translateY(65%)
+    }
+}
+
+@media (max-width: 360px) {
+    .about-us-full-width-image img {
+        transform: translateY(80%)
+    }
+}
+
+
+/*================================ MEMBERSHIPS ================================*/
+
+.section-title-membership {
+    background: url('./static/images/title-bg.png') no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 38px;
+}
+
+
+.membership-text-wrapper {
+    background: rgba(167, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.membership-text-wrapper > h2 {
+    color: rgb(255, 199, 79);
+    text-align: center;
+}
+
+.membership-text-wrapper > p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.membership-text-wrapper > .membership-text-list {
+    text-align: center;
+}
+
+.membership-card {
+    background: rgba(0, 0, 0);
+    margin-top: 0px; /* Space between text wrapper and cards */
+    margin-bottom: 20px; /* Adjust based on your layout */
+    height: 600px; /* Adjust based on content */
+}
+
+.membership-card .card-img-top {
+    width: 70px; /* Adjust size of your icon */
+    margin: 20px auto; /* Center icon */
+    margin-bottom: 0px;
+}
+
+.membership-card-text-list {
+    text-align: left;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.card-body > .card-text {
+    font-size: 20px;
+}
+
+.membership-text-list {
+    font-size: 22px;
+    color: rgb(255, 199, 79);
+    margin: 5px;
+}
+
+.membership-text-list:last-child {
+    margin-bottom: 20px; /* Adds space below the last list item */
+}
+
+.membership-card .card-title, .membership-card .price {
+    margin-bottom: 15px;
+}
+
+.card-title {
+    color: rgb(255, 199, 79);
+}
+
+.member-divider {
+    margin-top: 15px; /* Adjust top margin */
+    margin-bottom: 20px; /* Adjust bottom margin */
+    border: 0; /* Remove default border */
+    border-top: 1px solid #ccc; /* Small, light line */
+    width: 50%; /* Adjust width as needed */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* This will make sure all items stretch to fill the container */
+}
+
+.row > .col-lg-4 {
+    height: 600px;
+}
+
+/* Ensures the flex container centers its items and they stretch to fill */
+.d-flex {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: stretch; /* Makes items stretch to fill vertically */
+}
+
+/* Ensures the image covers its container */
+.img-fluid {
+    width: 100%; /* Ensures the image is responsive */
+    height: 100%; /* Stretches the image to the height of its container */
+    object-fit: cover; /* Ensures the image covers the area without losing its aspect ratio */
+}
+
+
+
+.membership-card .price {
+    font-size: 20px; /* Make the price bigger */
+    color: #919191; /* Price color */
+}
+
+
+.price-number-red {
+    font-size: 34px;
+    color: rgb(230, 18, 18);
+}
+
+.price-number-blue {
+    font-size: 34px;
+    color: rgb(21, 18, 230);
+}
+
+.star-icon {
+    color: gold; /* Star icon color */
+    margin-right: 5px; /* Space between the star icon and the text */
+}
+
+/* Adjustments for responsive behavior */
+@media (max-width: 992px) {
+    .membership-text-wrapper, .membership-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .membership-text-wrapper > .btn-custom {
+        width: 75%;
+        margin-top: 50px;
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .membership-text-wrapper {
+        margin-top: 20px;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .membership-card {
+        margin-bottom: 20px;
+    }
+
+    .row > .col-lg-4 {
+        flex: 0 0 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+
+    .membership-text-wrapper, .membership-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 412px) {
+    .membership-card {
+        height: auto;
+    }
+
+    .membership-text-wrapper {
+        height: auto;
+    }
+    
+}
+
+
+/*==================================== END OF MEMBERSHIPS ==============================*/
+
+/*=================================== FOOTER ==================================*/
+.footer {
+    background-color: rgba(117, 0, 0, 0.5); /* Dark red background */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .footer-logo {
+    max-width: 100px; /* Adjust based on your logo size */
+    margin-bottom: 20px;
+  }
+
+  .list-unstyled > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .footer-links-title {
+    background: url('./static/images/title-bg.png') no-repeat center;
+    background-size: contain; /* Adjusts the background size to match the title */
+    display: inline-block;
+    object-position: center;
+    padding: 15px 20px; /* Adjust based on your background image */
+    font-size: 25px;
+    position: relative;
+    z-index: 2;
+}
+  
+  .google-maps-image {
+    max-width: 75%; /* Ensure the image is responsive */
+    height: auto;
+  }
+  
+  /* Ensure the footer links are styled correctly */
+  .footer a.text-white:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .google-maps-image {
+        max-width: 45%; /* Ensure the image is responsive */
+        height: auto;
+      }
+
+    .footer > div > .row > div {
+        align-items: center !important;
+    }
+
+}
+
+
+
+
