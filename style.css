@@ -1,5 +1,7 @@
 body {
-    background-color: rgb(7, 2, 2);
+    min-height: 100vh; /* Make the app fill the whole viewport height */
+    background: url('./static/images/background.png') no-repeat center center fixed;
+    background-size: 100% 100%;
     color: white;
     font-family: 'Bebas Neue', Arial, sans-serif;
 }
